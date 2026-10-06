@@ -9,26 +9,28 @@ import android.widget.GridView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-  public GridView gridview;
+    public GridView gridview;
 
-  private AdapterView.OnItemClickListener onitemclick = new AdapterView.OnItemClickListener() {
+    private AdapterView.OnItemClickListener onitemclick =
+            new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
+                    Intent intent = new Intent(getBaseContext(),
+                            ViewUserActivity.class);
+                    intent.putExtra("id", gridview.getAdapter().getItemId(position));
+                    startActivity(intent);
+                }
+            };
+
     @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-      Intent intent = new Intent(getBaseContext(), ViewArticleActivity.class);
-      intent.putExtra("id", gridview.getAdapter().getItemId(position));
-      startActivity(intent);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
+
+        gridview = findViewById(R.id.gridview);
+        new UserData(getBaseContext(), gridview).loadData("https://raw.githubusercontent.com/samduong31241026707-art/PhotoApp/master/users.json", this);
+        gridview.setOnItemClickListener(onitemclick);
     }
-  };
-
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
-    getSupportActionBar().hide();
-
-    gridview = findViewById(R.id.gridview);
-    new ArticleData(getBaseContext(), gridview).loadData("https://raw.githubusercontent.com/thanhdnh/json/main/products.json", this);
-    gridview.setOnItemClickListener(onitemclick);
-  }
-
 }
