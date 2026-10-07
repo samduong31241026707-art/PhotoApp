@@ -42,34 +42,6 @@
       "password": "phuong@12345",
       "url_profile": "https:\/\/randomuser.me\/api\/portraits\/women\/21.jpg",
       "short_bio": "Phuong Hoang enjoys cooking new recipes and listening to indie music while she studies."
-    },
-    {
-      "id": "7",
-      "uname": "quan.dang",
-      "password": "quan@12345",
-      "url_profile": "https:\/\/randomuser.me\/api\/portraits\/men\/45.jpg",
-      "short_bio": "Quan Dang works well in a team and is always the first to help classmates debug their code."
-    },
-    {
-      "id": "8",
-      "uname": "huong.bui",
-      "password": "huong@12345",
-      "url_profile": "https:\/\/randomuser.me\/api\/portraits\/women\/65.jpg",
-      "short_bio": "Huong Bui reads novels in her spare time and is studying Japanese for her future internship."
-    },
-    {
-      "id": "9",
-      "uname": "khoa.ly",
-      "password": "khoa@12345",
-      "url_profile": "https:\/\/randomuser.me\/api\/portraits\/men\/86.jpg",
-      "short_bio": "Khoa Ly plays guitar in a student band and goes running every morning before class."
-    },
-    {
-      "id": "10",
-      "uname": "lan.dinh",
-      "password": "lan@12345",
-      "url_profile": "https:\/\/randomuser.me\/api\/portraits\/women\/90.jpg",
-      "short_bio": "Lan Dinh is a data analysis fan who loves turning messy spreadsheets into clear charts."
     }
   ]
 }
